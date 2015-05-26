@@ -82,9 +82,9 @@ prompt_pure_preprompt_render() {
 	[[ -n ${prompt_pure_git_delay_dirty_check+x} ]] && git_color=red
 
 	# construct prompt, beginning with path
-	local prompt="%F{blue}%~%f"
+	local prompt="%F{green}%~%f"
 	# git info
-	prompt+="%F{$git_color}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f"
+	prompt+="%F{$git_color}${vcs_info_msg_0_}%F{red}${prompt_pure_git_dirty}%f"
 	# git pull/push arrows
 	prompt+="%F{cyan}${prompt_pure_git_arrows}%f"
 	# username and machine if applicable
